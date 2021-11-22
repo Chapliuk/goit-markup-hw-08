@@ -1,0 +1,132 @@
+.header {
+  background-color: $primary-background-color;
+  border-bottom: 1px solid #ececec;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: $max-mobile) {
+    justify-content: space-between;
+    height: 60px;
+  }
+}
+
+.menu-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  fill: #000000;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+  @media screen and (min-width: $min-tablet) {
+    display: none;
+  }
+}
+.menu-button__icon {
+  display: block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: $max-mobile) {
+    display: none;
+  }
+}
+.nav__list {
+  display: flex;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  position: relative;
+
+  @extend %header-font;
+
+  color: $title-text-color;
+
+  transition: color $transition-duration $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.nav__link--current {
+  color: $accent-color;
+}
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+.nav__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: $accent-color;
+  opacity: 0;
+  transition: opacity $transition-duration $transition-timing-function;
+
+  &:focus::after,
+  &:hover::after {
+    opacity: 1;
+  }
+}
+.nav__link--current::after {
+  opacity: 1;
+}
+
+.contacts {
+  @media screen and (max-width: $max-mobile) {
+    display: none;
+  }
+  list-style: none;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding-left: 0;
+  @media screen and (max-width: $max-tablet) {
+    flex-direction: column;
+    transform: scale(0.86);
+  }
+}
+.contacts__item:not(:last-child) {
+  @media screen and (min-width: $min-tablet) and (max-width: $max-tablet) {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: $min-desktop) {
+    margin-right: 50px;
+  }
+}
+.contacts__mail,
+.contacts__tel {
+  display: flex;
+  align-items: center;
+
+  @extend %header-font;
+
+  color: $primary-text-color;
+
+  transition: color $transition-duration $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.contacts__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}

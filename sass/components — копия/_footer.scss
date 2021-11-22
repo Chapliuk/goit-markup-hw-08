@@ -1,0 +1,109 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $secondary-background-color;
+}
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+.address__box {
+  margin-right: 70px;
+}
+.footer__logo {
+  display: inline-block;
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+.address__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.address__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+.address__address {
+  text-decoration: none;
+  display: block;
+  color: $secondary-text-color;
+  @extend %footer-contacts-font;
+  transition: color $transition-duration $transition-timing-function;
+  &:focus,
+  &:hover {
+    color: $accent-color;
+  }
+}
+.address__mail,
+.address__tel {
+  @extend %footer-contacts-font;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.join {
+  margin-right: 93px;
+}
+.join__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  @extend %join__title-font;
+  color: $secondary-text-color;
+}
+.join__box {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  margin: 16px auto 0 auto;
+}
+.join__link {
+  display: block;
+  padding: 12px;
+  background-color: #ffffff10;
+  border-radius: 50%;
+  color: $secondary-text-color;
+  transition: background-color $transition-duration $transition-timing-function;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+.join__item:not(:last-child) {
+  margin-right: 10px;
+}
+.join__icon {
+  display: block;
+  fill: currentColor;
+}
+
+.subscribe {
+  display: flex;
+  align-items: flex-end;
+}
+.subscribe__label {
+  display: flex;
+  flex-direction: column;
+}
+.subscribe__text {
+  margin-bottom: 20px;
+  @extend %subscribe__text-font;
+  color: $secondary-text-color;
+}
+.subscribe__input {
+  display: inline-block;
+  width: 358px;
+  margin-right: 12px;
+  padding: 15px 16px;
+  box-sizing: border-box;
+  border: 1px solid #ffffff4d;
+  border-radius: 4px;
+
+  background-color: inherit;
+  transition: border-color $transition-duration $transition-timing-function;
+  &:focus-visible {
+    outline: none;
+    border-color: $accent-color;
+  }
+}
