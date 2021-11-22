@@ -4,6 +4,9 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  @media screen and (min-width: $min-desktop) {
+    flex-wrap: nowrap;
+  }
 }
 .clients__link {
   display: block;
