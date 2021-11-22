@@ -2,13 +2,15 @@
   list-style: none;
   padding-left: 0;
   margin: -15px;
-  flex-wrap: wrap;
   display: flex;
   justify-content: center;
   @media screen and (max-width: $max-mobile) {
     max-width: $min-mobile;
     margin-left: auto;
     margin-right: auto;
+  }
+  @media screen and (max-width: $max-tablet) {
+    flex-wrap: wrap;
   }
 }
 .clients__link {
