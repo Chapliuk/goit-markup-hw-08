@@ -17,6 +17,7 @@
   }
 }
 .portfolio__item {
+  display: flex;
   &:not(:last-child) {
     @media screen and (max-width: $max-mobile) {
       margin-bottom: 30px;
@@ -33,7 +34,8 @@
 .portfolio__link {
   box-shadow: none;
   transition: box-shadow $transition-duration $transition-timing-function;
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
 
   &:focus,
@@ -64,7 +66,7 @@
   padding: 0 24px;
   background: rgba(33, 150, 243, 0.9);
 
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform $transition-duration $transition-timing-function;
 }
 
@@ -79,6 +81,7 @@
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+  flex-grow: 1;
 }
 .portfolio__title {
   margin-top: 0;

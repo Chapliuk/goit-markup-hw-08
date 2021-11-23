@@ -5,16 +5,15 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  @media screen and (max-width: $max-mobile) {
-    margin-bottom: 35px;
-  }
   @media screen and (min-width: $min-tablet) {
     justify-content: center;
   }
 }
 .filter__item {
-  @media screen and (max-width: $max-mobile) {
-    margin-bottom: 15px;
+  &:nth-child(-n + 3) {
+    @media screen and (max-width: $max-mobile) {
+      margin-bottom: 15px;
+    }
   }
   &:not(:last-child) {
     margin-right: 8px;
